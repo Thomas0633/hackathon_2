@@ -37,7 +37,7 @@ class BarreNav extends Component {
       <div>
         <a href="http://localhost:3000/">
         <img
-          src="http://image.noelshack.com/fichiers/2018/51/4/1545317309-digipact-sans-fond.png"
+          src="http://image.noelshack.com/fichiers/2018/51/4/1545345132-mydigipact.png"
           className="Logo"
         /></a>
         <Navbar light expand="md" className="barrenav ">
@@ -55,7 +55,7 @@ class BarreNav extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
 
-                      <DropdownItem><Link to='/page-particulier'>Particulier</Link></DropdownItem>
+                      <DropdownItem><Link to='/page-particulier' className="colorparticulier">Particulier</Link></DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem>Entreprise</DropdownItem>
                     </DropdownMenu>
@@ -69,7 +69,7 @@ class BarreNav extends Component {
                   </NavItem>
                   <NavItem>
                     <NavLink className="taillepolicebarrenav" >
-                      <Link to='/contact'>Contact</Link>
+                      <Link className="colorparticulier" to='/contact'>Contact</Link>
                     </NavLink>
                   </NavItem>
                 </Nav>
