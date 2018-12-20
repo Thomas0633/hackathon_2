@@ -12,9 +12,10 @@ import {
   DropdownMenu,
   DropdownItem,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 import "./BarreNav.scss";
+import { Link } from 'react-router-dom'
 
 class BarreNav extends Component {
   constructor(props) {
@@ -53,7 +54,8 @@ class BarreNav extends Component {
                       Options
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Particulier</DropdownItem>
+
+                      <DropdownItem><Link to='/page-particulier'>Particulier</Link></DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem>Entreprise</DropdownItem>
                     </DropdownMenu>
@@ -66,8 +68,8 @@ class BarreNav extends Component {
                     <NavLink className="taillepolicebarrenav" href="/components/">Nos Astuces</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink className="taillepolicebarrenav" href="https://github.com/reactstrap/reactstrap">
-                      Contact
+                    <NavLink className="taillepolicebarrenav" >
+                      <Link to='/contact'>Contact</Link>
                     </NavLink>
                   </NavItem>
                 </Nav>
