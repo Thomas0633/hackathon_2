@@ -1,10 +1,15 @@
 import React from 'react';
+import './Etape.scss';
 
 const Etape = ({image, titre, text}) => (
   <div>
-    <img  className="pb-4  zoom" src={image} alt="des"/><br/>
-    {titre}<br/>
+    <img  src={image} alt="des"/>
+    <br/>
+    <p className="etapetitle">
+    {titre}</p><br/>
+    <p className="etapep">
     {text}
+    </p>
   </div>
       
 )
