@@ -1,11 +1,25 @@
 import React from 'react';
 import './AddEquipment.scss';
-import { Button, Row, Col,Form, FormGroup, Label, Input, CustomInput } from 'reactstrap';
+import { Button, Row, Col,Form, FormGroup, Label, Input, CustomInput,ModalHeader,Modal,ModalFooter,ModalBody } from 'reactstrap';
+import Modale from './Modale';
 
 class AddEquipment extends React.Component{
     constructor(props){
         super(props)
-        this.state = { subcategories:[] }
+        this.state = { 
+            subcategories:[],
+            category:'',
+            newee: {
+                mark: '',
+                model: '',
+                hours: '',
+            },
+            modal:false,
+         }
+        this.handleOptionChange = this.handleOptionChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.onChange = this.onChange.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
 
     componentDidMount(){
@@ -13,7 +27,7 @@ class AddEquipment extends React.Component{
 
         switch(simul){
             case 'Ecrans':
-                this.setState ({subcategories : ['Télévision','Ordinateur','Smartphone'] }) ;
+                this.setState ({subcategories : ['Téléviseur','Ordinateur','Smartphone'] }) ;
                 break;
             case 'Sons':
                 this.setState ({subcategories : ['Enceintes portables','Chaine Hifi'] }) ;
@@ -28,20 +42,56 @@ class AddEquipment extends React.Component{
         }
     }
 
+    handleOptionChange=(e)=>{
+        this.setState({
+          selectedOption: e.target.value
+        });
+      }
+
+    onChange(e) {
+        const { newee } = this.state;
+        newee[e.target.name] = e.target.value;
+        this.setState(newee);    }
+
+    handleClick(category){
+        this.setState({category:category})
+    }
+
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
     render(){
         const { categorie } = this.props;
-        const { subcategories } = this.state;
-        const simul = 'Ecrans';
+        const { subcategories, category, newee, mark, model } = this.state;
+        const simulcategorie = 'Ecrans';
 
         return(  
             <div className="AddEquipment">
-            <h2>Mes équipements de {categorie}</h2>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                    <ModalHeader toggle={this.toggle}>Mon {category} ajouté</ModalHeader>
+                    <ModalBody>
+                        <div className="PositiveResults">
+                            Bravo, le <span className="gras">{mark}</span> modèle <span className="gras">{model}</span> se classe dans les meilleurs équipements de sa catégorie pour ses performances énergétiques.
+                        </div>
+                        <div className="NeutralResults">
+                            Votre <span className="gras">{mark}</span> <span className="gras">{model}</span> consomme +200€/an par rapport à la moyenne de sa catégorie
+                        </div>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.toggle}>Suggérez-moi quelque-chose !</Button>{' '}
+                        <Button color="secondary" onClick={this.toggle}>D'accord</Button>
+                    </ModalFooter>
+                </Modal>
                 <Row>
                 <Col lg={4} className="subcategories" >
                 <ul >
                     {subcategories.map(btncateg=>
                         <li className="subcategorieslist">
-                            <Button className="subcategoriesbutton">
+                            <Button className="subcategoriesbutton" onClick={()=>this.handleClick(btncateg)}>
                                 <span>{btncateg}</span>
                             </Button>
                         </li>
@@ -49,19 +99,32 @@ class AddEquipment extends React.Component{
                 </ul>
 
                 </Col>
+                {category===''?
+                <div className="contentAddempty">
+                        <h3 className="pulse">Sélectionnez un type d'équipement de la catégorie {simulcategorie}</h3>
+                    </div>:
                 <Col lg={6} className="contentAdd">
-                        <h4>{simul}</h4>
+                        <h4>Dites nous en plus sur votre {category}...</h4>
                         <Form className="contentadded">
                             <FormGroup row>
                                 <Label for="exampleEmail" lg={5}>Quelle est sa marque ?</Label>
                                 <Col  lg={7}>
-                                    <Input type="text" name="mark" id="exampleEmail" placeholder="" />
+                                    <Input type="text" 
+                                    name="mark" 
+                                    id="exampleEmail" 
+                                    value={newee.mark}
+                                    onChange={this.onChange} />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Label for="exampleEmail" lg={5} >Quel est son modèle ?</Label>
                                 <Col  lg={7}>
-                                    <Input type="text" name="model" id="exampleEmail" placeholder="" />
+                                    <Input type="text" 
+                                    name="model" 
+                                    id="exampleEmail" 
+                                    value={newee.model}
+                                    onChange={this.onChange} 
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -69,24 +132,51 @@ class AddEquipment extends React.Component{
                                   <Col lg={7} className="d-flex justify-content-around">
                                     <Row className="d-flex justify-content-center">
                                         <Col lg={3}>
-                                            <CustomInput type="radio" id="exampleCustomRadio" name="customRadio" label="/jour" />
+                                            <CustomInput type="radio" 
+                                            id="exampleCustomRadio" 
+                                            name="jour" 
+                                            label="/jour"
+                                            value="jour" 
+                                            checked={this.state.selectedOption === 'jour'}
+                                            onChange={this.handleOptionChange} />
+                                
                                         </Col>
                                         <Col lg={4}>
-                                            <CustomInput type="radio" id="exampleCustomRadio2" name="customRadio" label="/semaine" />
+                                            <CustomInput type="radio" 
+                                            id="exampleCustomRadio2" 
+                                            name="semaine" 
+                                            label="/semaine"
+                                            value="semaine" 
+                                            checked={this.state.selectedOption === 'semaine'}
+                                            onChange={this.handleOptionChange} />
+                                             
                                         </Col>
                                         <Col lg={3}>
-                                            <CustomInput type="radio" id="exampleCustomRadio3" name="customRadio" label="/mois" />
+                                            <CustomInput type="radio" 
+                                            id="exampleCustomRadio3" 
+                                            name="mois" 
+                                            label="/mois"
+                                            value="mois" 
+                                            checked={this.state.selectedOption === 'mois'}
+                                            onChange={this.handleOptionChange} />
+                                             
                                         </Col>
                                     </Row>
                                  </Col>
                                 <Col  lg={{offset:'5',size:'7'}}>
-                                    <Input type="number" name="use" id="exampleEmail" placeholder="" />
+                                    <Input type="number" 
+                                    name="hours" 
+                                    id="exampleEmail"
+                                    value={newee.hours}
+                                    onChange={this.onChange} />
                                 </Col>
                             </FormGroup>
                         </Form>
-                        <Button size='lg' block className="buttonaddequipement">Confirmer l'ajout</Button>
+                        <Button size='lg' block className="buttonaddequipement" onClick={this.toggle}>
+                            Confirmer l'ajout
+                        </Button>
 
-                </Col>
+                    </Col> }
                 </Row>
             </div>
         )

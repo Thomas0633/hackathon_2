@@ -1,7 +1,55 @@
+@mixin hideTapHighlightColor() {
+	//Prevent highlight colour when element is tapped
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
 .AddEquipment{
     padding-top:5%;
     height:40%;
     margin:2%;
+    .gras{
+        font-weight:bold;
+    }
+    .contentAddempty{
+        padding:2%;
+        width:40%;
+        text-align: left;
+        align-items: center;
+        @keyframes pulse {
+            25% {
+                transform: scale(1.1);
+            }
+        
+            75% {
+                transform: scale(.9);
+            }
+        }
+        
+        .pulse {
+            display: inline-block;
+        
+            @include hideTapHighlightColor();
+            @include hardwareAccel();
+            @include improveAntiAlias();
+        
+            &:hover {
+                animation-name: pulse;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+        }
+        
+    }
     .subcategories{
         text-align: right;
         padding-right:0px;
@@ -48,6 +96,11 @@
             right: 10px;
         }
         }
+    .contentAdd{
+        width:300px;
+        height:300px;
+        background-color:grey;
+    }
     .contentAdd{
         background-color:rgb(217, 217, 224);
         padding:25px;
