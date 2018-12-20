@@ -1,0 +1,97 @@
+.AddEquipment{
+    height:40%;
+    margin:2%;
+    .subcategories{
+        text-align: right;
+        padding-right:0px;
+        .subcategorieslist{
+            list-style:none;
+        }
+        .subcategoriesbutton{
+            width:40%;
+            border-radius: 4px;
+            background-color:#7ad061;
+            border: none;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            padding: 9px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1px;
+            margin-bottom:7px;
+            box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+        }
+        .subcategoriesbutton{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .subcategoriesbutton:after{
+            content: '»';
+            position: absolute;
+            opacity: 0;  
+            top: 9px;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .subcategoriesbutton:hover{
+            content: '»';
+            padding-right: 24px;
+            padding-left:8px;
+        }
+        .subcategoriesbutton:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+        }
+    .contentAdd{
+        background-color:rgb(217, 217, 224);
+        padding:25px;
+        border-radius: 4px;
+        .buttonaddequipement{
+                border-radius: 4px;
+                background-color:#7ad061;
+                border: none;
+                color: #fff;
+                text-align: center;
+                font-size: 26px;
+                padding: 6px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 1px;
+                box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+            }
+            .buttonaddequipement{
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+    
+            .buttonaddequipement:after{
+                content: '+';
+                position: absolute;
+                opacity: 0;  
+                top: 9px;
+                right: -20px;
+                transition: 0.5s;
+            }
+            .buttonaddequipement:hover{
+                content: '+';
+                padding-right: 24px;
+                padding-left:8px;
+            }
+            .buttonaddequipement:hover:after {
+                opacity: 1;
+                right: 10px;
+            }
+        .contentadded{
+            width:100%;
+            text-align:left;
+        }
+        }
+        
+        }
