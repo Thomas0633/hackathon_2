@@ -1,3 +1,3 @@
 import React, { Component } from 'react';	
  
-  class PageParticulier extends
+  class PageParticulier extends 
