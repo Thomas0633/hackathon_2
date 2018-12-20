@@ -9,6 +9,7 @@ import AddEquipment from './components/AddEquipment';
 
 
 
+
 class App extends Component {
   render() {
     return (
