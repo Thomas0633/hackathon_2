@@ -50,7 +50,7 @@ class BarreNav extends Component {
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle className="taillepolicebarrenav" nav caret>
-                      Options
+                      Votre Situation
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Particulier</DropdownItem>

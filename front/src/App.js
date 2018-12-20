@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import AddEquipment from './components/AddEquipment';
 
 
+
 class App extends Component {
   render() {
     return (
