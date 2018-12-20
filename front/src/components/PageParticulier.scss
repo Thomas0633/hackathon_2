@@ -1,0 +1,25 @@
+.PageParticulier {
+  /* .titlePagePerso {
+
+  } */
+
+  .navPageParticulier {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+
+    .btnNavPageParticulier {
+      padding: 5px;
+      background-color: transparent !important;
+      border: 2px solid rgb(121, 203, 96);
+      color: black;
+      font-size: 1.3em;
+
+      &.active {
+        background-color: rgb(121, 203, 96) !important;
+        border: 2px solid rgb(121, 203, 96) !important;
+      }
+    }
+  }
+}
