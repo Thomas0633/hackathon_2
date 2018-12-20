@@ -1,7 +1,9 @@
+
 import React, { Component } from "react";
 import "./homePage.scss";
 import { Col, Row } from "reactstrap";
 import Etape from "./Etape";
+import { Link } from 'react-router-dom';
 
 class HomePage extends Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class HomePage extends Component {
       <div className="all">
         <div className="bg">
           <div className="text">
+
             <h1>Participez à la sobriété numérique !</h1>
             <h2>
               Nous vous offrons diagnostic et recommandations sur votre

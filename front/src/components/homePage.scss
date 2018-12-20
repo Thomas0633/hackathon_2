@@ -1,15 +1,20 @@
 .all{
   .bg{
-    background-image: url("http://image.noelshack.com/fichiers/2018/51/4/1545325019-banniere-accueil.png");
+    background-image: url("http://image.noelshack.com/fichiers/2018/51/4/1545340943-banniere-accueil-finale.png");
     height: 600px;
+    background-repeat: no-repeat;
 
-    
       .text{
+        color: #ffffff;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-color: rgba(0, 0, 0,0.5);
+        a{
+          color: white;
+        }
   
         .btnAlign{
           display: flex;
