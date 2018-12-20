@@ -5,8 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import HomePageof from './components/HomePageof';
 import PageParticulier from './components/PageParticulier';
 import Contactform from './components/Contactform';
-import TemplateCards from './components/TemplateCards';
-import Footer from './components/Footer';
+
 
 
 
@@ -20,8 +19,6 @@ class App extends Component {
           <Route path="/contact" component={Contactform} />
         </Switch>
         <BarreNav />
-        <TemplateCards />
-        <Footer />
       </div>
     );
   }
