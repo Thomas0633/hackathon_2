@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import BarreNav from "./components/BarreNav";
 import { Switch, Route } from "react-router-dom";
-import HomePageof from './components/HomePageof';
+import HomePage from './components/HomePage';
 import PageParticulier from './components/PageParticulier';
 import Contactform from './components/Contactform';
 import AddEquipment from './components/AddEquipment';
@@ -16,7 +16,7 @@ class App extends Component {
         <BarreNav />
         <Switch>
           <Route path="/add-equipment" component={AddEquipment} />
-          <Route exact path="/" component={HomePageof} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/page-particulier" component={PageParticulier} />
           <Route path="/contact" component={Contactform} />
         </Switch>
