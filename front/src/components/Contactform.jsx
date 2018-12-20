@@ -6,7 +6,11 @@ import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reac
 export default class Contactform extends React.Component {
   render() {
     return (
-        <Container>
+      
+        <Container className= "formMargin">
+        <h1>Contactez nous</h1>
+
+
       <Form>
           <Row>
           <Col md= "6">    
@@ -37,7 +41,7 @@ export default class Contactform extends React.Component {
           <Label for="text">Votre message</Label>
           <Input type="textarea" name="textForm" id="text" placeholder= "Votre message..." />
         </FormGroup>
-        <Button  color="success" className="formBtn">Envoyer</Button>
+        <a className="fancy-button bg-gradient1"><span>Envoyez votre message !</span></a>
       </Form>
       </Container>
     );
