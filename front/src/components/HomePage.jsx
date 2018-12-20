@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './homePage.scss';
 import { Col, Row } from 'reactstrap';
 import Etape from './Etape';
+import { Link } from 'react-router-dom';
 
 class HomePage extends Component {
   constructor(props) {
@@ -18,7 +19,9 @@ class HomePage extends Component {
               <h2>Nous vous offrons diagnostic et recommandations sur votre environnement</h2>
               <h2>numérique avec l’ambition de vous aider.</h2>
               <div className="btnAlign pt-5">
-                <a className="fancy-button bg-gradient1"><span><img src="http://image.noelshack.com/fichiers/2018/51/4/1545334326-particulier.png"/>Vous êtes un particulier ?</span></a><div className="espace"></div><a className="fancy-button bg-gradient1"><span><img src="http://image.noelshack.com/fichiers/2018/51/4/1545334803-entreprise.png"/>Vous êtes une entreprise ?</span></a>
+              <Link to='/page-particulier'><a className="fancy-button bg-gradient1"><span><img src="http://image.noelshack.com/fichiers/2018/51/4/1545334326-particulier.png"/>Vous êtes un particulier ?</span></a></Link>
+                <div className="espace"></div>
+                <a className="fancy-button bg-gradient1"><span><img src="http://image.noelshack.com/fichiers/2018/51/4/1545334803-entreprise.png"/>Vous êtes une entreprise ?</span></a>
               </div>
           </div>
         </div>
