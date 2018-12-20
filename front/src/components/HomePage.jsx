@@ -44,7 +44,7 @@ class HomePage extends Component {
           <Col className="pt-4" xs="12" lg="4">
             <Etape 
               image="http://image.noelshack.com/fichiers/2018/51/4/1545322903-picto-collaboration.png"
-              titre="Votre collaboration :"
+              titre="Votre collaboration : "
               text="Réduisez votre empreinte carbone grâce à nos recommandations !"
             />
           </Col>
