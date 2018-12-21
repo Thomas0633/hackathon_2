@@ -15,7 +15,6 @@ class HomePage extends Component {
       <div className="all">
         <div className="bg">
           <div className="text">
-
             <h1>Participez à la sobriété numérique !</h1>
             <h2>
               Nous vous offrons diagnostic et recommandations sur votre
