@@ -37,7 +37,7 @@ class HomePage extends Component {
               <a className="fancy-button bg-gradient1">
                   <span>
                     <span className="TailleIcone">
-                      <i className="fas fa-home" />
+                      <i className="fas fa-building" />
                     </span>
                     Vous êtes une entreprise ?
                   </span>
