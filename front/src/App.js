@@ -8,6 +8,7 @@ import Contactform from './components/Contactform';
 import AddEquipment from './components/AddEquipment';
 import MesAstuces from './components/MesAstuces';
 import Footer from './components/Footer';
+import Concept from "./components/Concept";
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/page-particulier" component={PageParticulier} />
           <Route path="/contact" component={Contactform} />
           <Route path="/MesAstuces" component={MesAstuces} />
+          <Route path="/Concept" component={Concept} />
         </Switch>
         <Footer />
       </div>
