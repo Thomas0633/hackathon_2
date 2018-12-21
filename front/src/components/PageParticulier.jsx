@@ -3,17 +3,30 @@ import { Button } from 'reactstrap';
 import './PageParticulier.scss';
 import MesEquipements from './MesEquipements';
 import MesUsagesInternet from './MesUsagesInternet';
+import AddEquipment from './AddEquipment';
+import Zoom from 'react-reveal/Zoom';
 
 
 class PageParticulier extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      heightPage: 0,
       ongletActif: 'mesEquipements',
       activeMesEquipements: 'active',
       activeMesUsagesInternet: '',
+      addEquipement: false,
     }
     this.handleClickNavPage = this.handleClickNavPage.bind(this);
+    this.handleClickAddEquipement = this.handleClickAddEquipement.bind(this);
+    this.handleClickClose = this.handleClickClose.bind(this);
+  }
+
+  componentDidMount() {
+    const height = document.body.scrollHeight - 110;
+    this.setState({
+      heightPage: height,
+    }, () => console.log(this.state));
   }
 
   handleClickNavPage(e) {
@@ -36,12 +49,34 @@ class PageParticulier extends Component {
     };
   }
 
+  handleClickAddEquipement() {
+    this.setState({
+      addEquipement: true,
+    });
+  }
+
+  handleClickClose() {
+    this.setState({
+      addEquipement: false,
+    });
+  }
+
   render() {
     return (
       <div className="PageParticulier">
-        <h1 className="titlePagePerso">Particulier</h1>
+        {
+          (this.state.addEquipement) ?
+          <div className="containerAddEquipement" style={{ minHeight: this.state.heightPage }}>
+            <Zoom bottom>
+              <Button className="closeFormAddEquipement" onClick={this.handleClickClose}><i className="fas fa-times"></i></Button>
+              <AddEquipment />
+            </Zoom>
+          </div>
+           : null
+        }
+        <h1 className="titlePagePerso"><i className="fas fa-home"></i> Particulier</h1>
         <nav className="navPageParticulier">
-            <Button className={`btnNavPageParticulier ${this.state.activeMesEquipements}`} name="mesEquipements" onClick={this.handleClickNavPage}>
+            <Button className={`btnNavPageParticulier ${this.state.activeMesEquipements} mr-5`} name="mesEquipements" onClick={this.handleClickNavPage}>
               Mes équipements
             </Button>
             <Button className={`btnNavPageParticulier ${this.state.activeMesUsagesInternet}`} name="mesUsagesInternet" onClick={this.handleClickNavPage}>
@@ -49,7 +84,7 @@ class PageParticulier extends Component {
             </Button>
         </nav>
         <div>
-          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements /> : <MesUsagesInternet />}
+          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement}  /> : <MesUsagesInternet />}
         </div>
       </div>
     )
