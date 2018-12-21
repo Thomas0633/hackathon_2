@@ -22,11 +22,11 @@ class MesEquipements extends Component {
   }
 
   componentDidUpdate() {
-    if (this.props.obj.length !== undefined) {
-      console.log(this.props.obj.length)
+    if ((this.state.objDemo.title === undefined) && (this.props.obj.title !== undefined)) {
       this.setState({
+        objDemo: this.props.obj,
         mesEquipements: [...this.state.mesEquipements, this.props.obj],
-      });
+      }, () => console.log(this.state));
     }
   }
 

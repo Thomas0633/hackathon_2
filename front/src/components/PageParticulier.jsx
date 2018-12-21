@@ -76,7 +76,7 @@ class PageParticulier extends Component {
     this.setState({
       addEquipement: false,
       objDemo,
-    }, () => console.log(this.state));
+    }, () => console.log(objDemo.title));
   }
 
   render() {
@@ -87,7 +87,7 @@ class PageParticulier extends Component {
           <div className="containerAddEquipement" style={{ minHeight: this.state.heightPage }}>
             <Zoom bottom>
               <Button className="closeFormAddEquipement" onClick={this.handleClickClose}><i className="fas fa-times"></i></Button>
-              <AddEquipment />
+              <AddEquipment clickConfirmAdd={this.handleClickConfirmAdd} />
             </Zoom>
           </div>
            : null
@@ -102,7 +102,7 @@ class PageParticulier extends Component {
             </Button>
         </nav>
         <div>
-          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement} clickConfirmAdd={this.handleClickConfirmAdd} obj={this.state.objDemo} /> : <MesUsagesInternet />}
+          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement} obj={this.state.objDemo} /> : <MesUsagesInternet />}
         </div>
       </div>
     )
