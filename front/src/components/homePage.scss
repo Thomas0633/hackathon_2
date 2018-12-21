@@ -13,7 +13,7 @@
         flex-direction: column;
         background-color: rgba(0, 0, 0,0.5);
         a{
-          color: white;
+          color: black;
         }
   
         .btnAlign{
@@ -118,7 +118,6 @@ $neon: #00FFF8;
 		color: #ffffff;
 		
 		span {
-			filter: brightness(.9) contrast(1.2);
 			transform: scale(0.96);
 		}
 		&:before {
