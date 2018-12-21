@@ -47,7 +47,7 @@ class Bilan extends Component {
               <h2 className="titlebilan">Impact carbone de vos équiments :</h2>
               <div className="text-center titlebilan">75%</div>
               <Progress className="mb-5" value={75} color="danger" /><br />
-
+              
               <h2 className="titlebilan">Impact carbone de votre usage internet :</h2>
               <div className="text-center titlebilan">55%</div>
               <Progress className="mb-5" value={55} color="warning" /><br />

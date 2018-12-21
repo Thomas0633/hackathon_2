@@ -6,6 +6,7 @@ import TemplateCards from './TemplateCards';
 import Zoom from 'react-reveal/Zoom';
 import Bilan from './Bilan';
 
+
 class MesEquipements extends Component {
   constructor(props) {
     super(props)
