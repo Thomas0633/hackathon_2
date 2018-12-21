@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import { Button, Row } from 'reactstrap';
 import './MesEquipements.scss';
 import equipements from '../equipements.json';
 import TemplateCards from './TemplateCards';
@@ -50,7 +50,7 @@ class MesEquipements extends Component {
             <Button className="btnAddEquipement" onClick={this.props.clickAddEquipement}>Ajouter un équipement</Button>
             <Zoom>
               <h2>Mes équipements</h2>
-              <div className="containerCardMesEquipements">
+              <Row className="containerCardMesEquipements">
                 {this.state.mesEquipements.map(item => {
                   return <TemplateCards
                     url={item.url}
@@ -63,7 +63,7 @@ class MesEquipements extends Component {
                     impact={item.impact}
                   />
                 })}
-              </div>
+              </Row>
             </Zoom>
           </div>
         }
