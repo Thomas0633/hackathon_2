@@ -19,7 +19,7 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
-            <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
           </Card>
         </Col>
       );
@@ -38,7 +38,7 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
-            <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
           </Card>
         </Col>
       );
@@ -57,6 +57,7 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
             <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
           </Card>
         </Col>
@@ -76,7 +77,8 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
-            <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
+
           </Card>
         </Col>
       );
@@ -95,7 +97,7 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
-            <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
           </Card>
         </Col>
       );
@@ -114,7 +116,8 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
-            <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
+
           </Card>
         </Col>
       );
@@ -133,7 +136,7 @@ const TemplateCards = (props) => {
                 <span className="label">Coût par année :</span> {props.cost} €
               </CardText>
             </CardBody>
-            <CardFooter><span className="impactresult">Impact sur l'environement {props.impact}</span></CardFooter>
+            <CardFooter><span className="impactresult">Impact sur l'environnement {props.impact} kg CO²e/an</span></CardFooter>
           </Card>
         </Col>
       );
