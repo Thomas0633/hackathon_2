@@ -5,6 +5,7 @@ import MesEquipements from './MesEquipements';
 import MesUsagesInternet from './MesUsagesInternet';
 import AddEquipment from './AddEquipment';
 import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
 
 
 class PageParticulier extends Component {
@@ -92,7 +93,9 @@ class PageParticulier extends Component {
           </div>
            : null
         }
-        <h1 className="titlePagePerso"><i className="fas fa-home"></i> Particulier</h1>
+        <Flip left>
+          <h1 className="titlePagePerso"><i className="fas fa-home"></i> Particulier</h1>
+        </Flip>
         <nav className="navPageParticulier">
             <Button className={`btnNavPageParticulier ${this.state.activeMesEquipements} mr-5`} name="mesEquipements" onClick={this.handleClickNavPage}>
               Mes équipements

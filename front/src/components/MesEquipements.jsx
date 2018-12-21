@@ -3,11 +3,14 @@ import { Button } from 'reactstrap';
 import './MesEquipements.scss';
 import equipements from '../equipements.json';
 import TemplateCards from './TemplateCards';
+import Zoom from 'react-reveal/Zoom';
 
 class MesEquipements extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      isLoading: true,
+      height: window.innerHeight-620,
       mesEquipements: equipements,
       title: '',
       mark: '',
@@ -21,6 +24,12 @@ class MesEquipements extends Component {
     }
   }
 
+  componentDidMount() {
+    setTimeout(() => this.setState({
+      isLoading: false,
+    }), 2000);
+  }
+
   componentDidUpdate() {
     if ((this.state.objDemo.title === undefined) && (this.props.obj.title !== undefined)) {
       this.setState({
@@ -32,25 +41,33 @@ class MesEquipements extends Component {
 
   render() {
     return (
-      <div className="MesEquipements">
+      <div className="MesEquipements" style={{ minHeight: this.state.height }}>
         <div className="containerMesEquipements">
-          <Button className="btnAddEquipement" onClick={this.props.clickAddEquipement}>Ajouter un équipement</Button>
-          <h2>Mes équipements</h2>
-          <div className="containerCardMesEquipements">
-            {this.state.mesEquipements.map(item => {
-              return <TemplateCards
-                url={item.url}
-                title={item.title}
-                mark={item.mark}
-                model={item.model}
-                use={item.use}
-                consumption={item.consumption}
-                cost={item.cost}
-                impact={item.impact}
-              />
-            })}
+        {
+          (this.state.isLoading) ?
+          <h1 className="loadingMesEquipements"><i className="fas fa-spinner"></i></h1> :
+          <div>
+            <Button className="btnAddEquipement" onClick={this.props.clickAddEquipement}>Ajouter un équipement</Button>
+            <Zoom>
+              <h2>Mes équipements</h2>
+              <div className="containerCardMesEquipements">
+                {this.state.mesEquipements.map(item => {
+                  return <TemplateCards
+                    url={item.url}
+                    title={item.title}
+                    mark={item.mark}
+                    model={item.model}
+                    use={item.use}
+                    consumption={item.consumption}
+                    cost={item.cost}
+                    impact={item.impact}
+                  />
+                })}
+              </div>
+            </Zoom>
           </div>
-        </div>
+        }
+      </div>
       </div>
     )
   }
