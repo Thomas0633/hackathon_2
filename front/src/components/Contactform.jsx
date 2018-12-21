@@ -1,14 +1,14 @@
 import React from 'react';
 import './Contactform.scss';
 
-import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
 
 export default class Contactform extends React.Component {
   render() {
     return (
       
         <Container className= "formMargin">
-        <h1>Contactez nous</h1>
+        <h1 className="titleforms">Contactez nous</h1>
 
 
       <Form>
@@ -22,14 +22,14 @@ export default class Contactform extends React.Component {
           </Col>
           <Col md= "6">
           <FormGroup>
-          <Label for="firstname">Prenom</Label>
-          <Input type="text" name="firstnameForm" id="firstname" placeholder="Votre prenom" />     
+          <Label for="firstname">Prénom</Label>
+          <Input type="text" name="firstnameForm" id="firstname" placeholder="Votre prénom" />     
         </FormGroup>
         </Col>
         </Row>
         <FormGroup>
           <Label for="email">Email</Label>
-          <Input type="email" name="emailForm" id="email" placeholder="Exemple : Wilder@digipact.com" />
+          <Input type="email" name="emailForm" id="email" placeholder=" Wilder@digipact.com" />
         </FormGroup>   
 
         <FormGroup>
