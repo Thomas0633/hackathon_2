@@ -3,7 +3,7 @@
     background-image: url("http://image.noelshack.com/fichiers/2018/51/4/1545340943-banniere-accueil-finale.png");
     height: 600px;
     background-repeat: no-repeat;
-
+      
       .text{
         color: #ffffff;
         height: 100%;
@@ -13,7 +13,7 @@
         flex-direction: column;
         background-color: rgba(0, 0, 0,0.5);
         a{
-          color: white;
+          color: black;
         }
   
         .btnAlign{
@@ -26,6 +26,7 @@
       
       }
   }
+  
 }
 
 
@@ -75,11 +76,8 @@ $neon: #00FFF8;
 	letter-spacing: 0.07em;
 	text-transform: uppercase;
 	line-height: 50px;
-	color: #ffffff;
+	color: black;
   position: relative;	
-	&.bg-gradient1 {
-		text-shadow: 0px 0px 1px #BF4C28;
-	}
 	
 	
 	&:before {
@@ -110,15 +108,11 @@ $neon: #00FFF8;
 		will-change: transform, filter;
 		transform-style: preserve-3d;
 		transition: all 0.3s ease-out;
-	}
-	&:focus{
-		color: #ffffff;
-	}
+  }
+  
 	&:hover {
-		color: #ffffff;
 		
 		span {
-			filter: brightness(.9) contrast(1.2);
 			transform: scale(0.96);
 		}
 		&:before {
@@ -164,4 +158,10 @@ $neon: #00FFF8;
 }
 .TailleIcone{
   font-size: 1.6em;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.titlehome {
+  font-family: 'Poppins', sans-serif;
 }

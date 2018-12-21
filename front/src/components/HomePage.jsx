@@ -15,13 +15,12 @@ class HomePage extends Component {
       <div className="all">
         <div className="bg">
           <div className="text">
-
-            <h1>Participez à la sobriété numérique !</h1>
-            <h2>
+            <h1 className="titlehome">Participez à la sobriété numérique !</h1>
+            <h2 className="titlehome">
               Nous vous offrons diagnostic et recommandations sur votre
               environnement
             </h2>
-            <h2>numérique avec l’ambition de vous aider.</h2>
+            <h2 className="titlehome">numérique avec l’ambition de vous aider.</h2>
             <div className="btnAlign pt-5">
               <Link to='/page-particulier'>
                 <a className="fancy-button bg-gradient1">
@@ -34,14 +33,16 @@ class HomePage extends Component {
                 </a>
               </Link>
               <div className="espace" />
+              <Link to='/page-particulier'>
               <a className="fancy-button bg-gradient1">
-                <span>
-                  <span className="TailleIcone">
-                    <i className="fas fa-building" />
+                  <span>
+                    <span className="TailleIcone">
+                      <i className="fas fa-building" />
+                    </span>
+                    Vous êtes une entreprise ?
                   </span>
-                  Vous êtes une entreprise ?
-                </span>
-              </a>
+                </a>
+              </Link>
             </div>
           </div>
         </div>

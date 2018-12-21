@@ -3,7 +3,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -47,7 +46,8 @@ class BarreNav extends Component {
               <Col md="6" className="margeintérieur">
                 <Nav navbar className="Colbarrenav">
                   <NavItem>
-                    <NavLink className="taillepolicebarrenav" >Concept</NavLink>
+                  <Link to="/Concept" className="colorparticulier">
+                    <NavLink className="taillepolicebarrenav" >Concept</NavLink></Link>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle className="taillepolicebarrenav" nav caret>
@@ -65,12 +65,14 @@ class BarreNav extends Component {
               <Col md="6" className="margeintérieur2">
                 <Nav className="Colbarrenav" navbar>
                   <NavItem>
-                  <Link to="/MesAstuces"><NavLink className="taillepolicebarrenav" href="/components/">Nos Astuces</NavLink></Link>
+                  <Link to="/MesAstuces" className="colorparticulier"><NavLink className="taillepolicebarrenav" href="/components/">Nos Astuces</NavLink></Link>
                   </NavItem>
                   <NavItem>
+                  <Link className="colorparticulier" to='/contact'>
                     <NavLink className="taillepolicebarrenav" >
-                      <Link className="colorparticulier" to='/contact'>Contact</Link>
+                      Contact
                     </NavLink>
+                    </Link>
                   </NavItem>
                 </Nav>
               </Col>
