@@ -12,7 +12,7 @@ class Footer extends Component {
           <a href="https://fr.wikipedia.org/wiki/Conditions_g%C3%A9n%C3%A9rales_d%27utilisation" target="_blank" className="afooter">
           C.G.U.
           </a>
-        <p className="afooter">by{" "}
+        <p className="aunique">by{" "}
           <a href="https://theshiftproject.org/" target="_blank" className="afooter">
           The Shift Project
           </a>
