@@ -20,7 +20,7 @@ class HomePage extends Component {
               Nous vous offrons diagnostic et recommandations sur votre
               environnement
             </h2>
-            <h2>numérique avec l’ambition de vous aider.</h2>
+            <h2 className="titlehome">numérique avec l’ambition de vous aider.</h2>
             <div className="btnAlign pt-5">
               <Link to='/page-particulier'>
                 <a className="fancy-button bg-gradient1">
