@@ -5,6 +5,7 @@ import MesEquipements from './MesEquipements';
 import MesUsagesInternet from './MesUsagesInternet';
 import AddEquipment from './AddEquipment';
 import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
 
 
 class PageParticulier extends Component {
@@ -76,7 +77,7 @@ class PageParticulier extends Component {
     this.setState({
       addEquipement: false,
       objDemo,
-    }, () => console.log(this.state));
+    }, () => console.log(objDemo.title));
   }
 
   render() {
@@ -87,12 +88,14 @@ class PageParticulier extends Component {
           <div className="containerAddEquipement" style={{ minHeight: this.state.heightPage }}>
             <Zoom bottom>
               <Button className="closeFormAddEquipement" onClick={this.handleClickClose}><i className="fas fa-times"></i></Button>
-              <AddEquipment />
+              <AddEquipment clickConfirmAdd={this.handleClickConfirmAdd} />
             </Zoom>
           </div>
            : null
         }
-        <h1 className="titlePagePerso"><i className="fas fa-home"></i> Particulier</h1>
+        <Flip left>
+          <h1 className="titlePagePerso"><i className="fas fa-home"></i> Particulier</h1>
+        </Flip>
         <nav className="navPageParticulier">
             <Button className={`btnNavPageParticulier ${this.state.activeMesEquipements} mr-5`} name="mesEquipements" onClick={this.handleClickNavPage}>
               Mes équipements
@@ -102,7 +105,7 @@ class PageParticulier extends Component {
             </Button>
         </nav>
         <div>
-          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement} clickConfirmAdd={this.handleClickConfirmAdd} obj={this.state.objDemo} /> : <MesUsagesInternet />}
+          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement} obj={this.state.objDemo} /> : <MesUsagesInternet />}
         </div>
       </div>
     )

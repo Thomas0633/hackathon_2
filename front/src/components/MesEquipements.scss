@@ -7,6 +7,10 @@
   margin: 50px 0 50px 0;
   padding: 0 4% 0 4% !important;
 
+  .loadingMesEquipements {
+    animation: logo-loading-spin infinite 1s linear;
+  }
+
   .containerMesEquipements {
     @include borderContainer;
     padding: 20px 0 20px 0;
@@ -15,10 +19,16 @@
     .btnAddEquipement {
       position: absolute;
       right: 20px;
+      z-index: 999;
     }
 
     .containerCardMesEquipements {
       display: flex;
     }
   }
+}
+
+@keyframes logo-loading-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

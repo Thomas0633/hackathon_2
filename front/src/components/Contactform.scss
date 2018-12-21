@@ -14,5 +14,9 @@
   margin-bottom : 2%;
 }
 
-
-
+.modal-dialog {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    transform: translate(-50%, -50%) !important;
+}
