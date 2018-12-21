@@ -47,7 +47,7 @@ class BarreNav extends Component {
               <Col md="6" className="margeintérieur">
                 <Nav navbar className="Colbarrenav">
                   <NavItem>
-                    <NavLink className="taillepolicebarrenav" href="/components/">Concept</NavLink>
+                    <NavLink className="taillepolicebarrenav" >Concept</NavLink>
                   </NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle className="taillepolicebarrenav" nav caret>
@@ -65,7 +65,7 @@ class BarreNav extends Component {
               <Col md="6" className="margeintérieur2">
                 <Nav className="Colbarrenav" navbar>
                   <NavItem>
-                    <NavLink className="taillepolicebarrenav" href="/components/">Nos Astuces</NavLink>
+                  <Link to="/MesAstuces"><NavLink className="taillepolicebarrenav" href="/components/">Nos Astuces</NavLink></Link>
                   </NavItem>
                   <NavItem>
                     <NavLink className="taillepolicebarrenav" >
