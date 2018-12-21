@@ -29,13 +29,11 @@ class AddEquipment extends React.Component{
     }
 
     render(){
-        const { categorie } = this.props;
         const { subcategories } = this.state;
         const simul = 'Ecrans';
 
         return(  
             <div className="AddEquipment">
-            <h2>Mes équipements de {categorie}</h2>
                 <Row>
                 <Col lg={4} className="subcategories" >
                 <ul >

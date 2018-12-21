@@ -1,0 +1,22 @@
+[
+  {
+    "title" : "ORDINATEUR",
+    "mark" : "ASUS",
+    "model" : "Zen Book Pro 14'",
+    "use" : "75",
+    "consumption" : "75",
+    "cost" : "12",
+    "impact" : "3",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
+  },
+  {
+    "title" : "ORDINATEUR",
+    "mark" : "DELL",
+    "model" : "XPS 8930",
+    "use" : "200",
+    "consumption" : "200",
+    "cost" : "30",
+    "impact" : "4",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
+  }
+]
