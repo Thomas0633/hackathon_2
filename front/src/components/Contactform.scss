@@ -12,11 +12,18 @@
   font-size : 1.8rem;
   font-weight : bold;
   margin-bottom : 2%;
+  font-family: 'Poppins', sans-serif!important;
 }
+
+
 
 .modal-dialog {
     position: absolute;
     top: 35%;
     left: 15%;
     transform: translate(-50%, -50%) !important;
+}
+
+.policebutton {
+  font-family: 'Poppins', sans-serif;
 }
