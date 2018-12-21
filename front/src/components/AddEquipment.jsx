@@ -13,6 +13,8 @@ class AddEquipment extends React.Component{
                 mark: '',
                 model: '',
                 hours: '',
+                consumption: '',
+                cost: '',
             },
             modal:false,
          }
@@ -65,7 +67,7 @@ class AddEquipment extends React.Component{
   }
 
     render(){
-        const { categorie } = this.props;
+        const { categorie, clickConfirmAdd } = this.props;
         const { subcategories, category, newee, mark, model } = this.state;
         const simulcategorie = 'Ecrans';
 
@@ -171,8 +173,30 @@ class AddEquipment extends React.Component{
                                     onChange={this.onChange} />
                                 </Col>
                             </FormGroup>
+                            <FormGroup row>
+                                <Label for="consumption" lg={5} >Quelle est sa consommation énergétique ?</Label>
+                                <Col  lg={7}>
+                                    <Input type="text" 
+                                    name="consumption" 
+                                    id="consumption" 
+                                    value={newee.consumption}
+                                    onChange={this.onChange} 
+                                    />
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Label for="cost" lg={5} >Quelle est son coût par année ?</Label>
+                                <Col  lg={7}>
+                                    <Input type="text" 
+                                    name="cost" 
+                                    id="cost" 
+                                    value={newee.cost}
+                                    onChange={this.onChange} 
+                                    />
+                                </Col>
+                            </FormGroup>
                         </Form>
-                        <Button size='lg' block className="buttonaddequipement" onClick={this.toggle}>
+                        <Button size='lg' block className="buttonaddequipement" onClick={clickConfirmAdd}>
                             Confirmer l'ajout
                         </Button>
 

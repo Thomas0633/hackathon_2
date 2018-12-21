@@ -19,35 +19,12 @@
         font-weight:bold;
     }
     .contentAddempty{
+        background-color:rgb(217, 217, 224);
+        border-radius: 4px;
         padding:2%;
         width:40%;
         text-align: left;
         align-items: center;
-        @keyframes pulse {
-            25% {
-                transform: scale(1.1);
-            }
-        
-            75% {
-                transform: scale(.9);
-            }
-        }
-        
-        .pulse {
-            display: inline-block;
-        
-            @include hideTapHighlightColor();
-            @include hardwareAccel();
-            @include improveAntiAlias();
-        
-            &:hover {
-                animation-name: pulse;
-                animation-duration: 1s;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-            }
-        }
-        
     }
     .subcategories{
         text-align: right;
@@ -97,7 +74,6 @@
         }
     .contentAdd{
         width:300px;
-        height:300px;
         background-color:grey;
     }
     .contentAdd{
@@ -111,7 +87,6 @@
                 color: #fff;
                 text-align: center;
                 font-size: 26px;
-                padding: 6px;
                 transition: all 0.5s;
                 cursor: pointer;
                 margin: 1px;
@@ -127,8 +102,7 @@
             .buttonaddequipement:after{
                 content: '+';
                 position: absolute;
-                opacity: 0;  
-                top: 9px;
+                opacity: 0;
                 right: -20px;
                 transition: 0.5s;
             }
