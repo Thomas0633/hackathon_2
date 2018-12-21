@@ -23,14 +23,16 @@ class HomePage extends Component {
             </h2>
             <h2>numérique avec l’ambition de vous aider.</h2>
             <div className="btnAlign pt-5">
-              <a className="fancy-button bg-gradient1">
-                <span>
-                  <span className="TailleIcone">
-                    <i className="fas fa-home" />
+              <Link to='/page-particulier'>
+                <a className="fancy-button bg-gradient1">
+                  <span>
+                    <span className="TailleIcone">
+                      <i className="fas fa-home" />
+                    </span>
+                    Vous êtes un particulier ?
                   </span>
-                  Vous êtes un particulier ?
-                </span>
-              </a>
+                </a>
+              </Link>
               <div className="espace" />
               <a className="fancy-button bg-gradient1">
                 <span>
