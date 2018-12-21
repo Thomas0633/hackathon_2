@@ -54,13 +54,13 @@ class Bilan extends Component {
 
 
               <h1 className="titlebilan">Score total :</h1>
-              <h1 className="mb-5 score titlebilan">7/10</h1>
+              <h1 className="mb-5 score titlebilan">3/10</h1>
 
               <h5 className="mb-3 titlebilan">PRECONISATIONS APRES CALCUL DE VOTRE BILAN :</h5>
               <h5 className="titlebilan">-  N'appuyez pas automatiquement sur le bouton « Rechercher » de Google : vous émettez l’équivalent de 5 à 7 grammes de CO².</h5>
               <h5 className="titlebilan">-  Réduisez vos envois de mails inutiles : envoyer un simple mail rejette 10 grammes de CO² (l’équivalent de ce que peut absorber un arbre en une journée).</h5>
               <h5 className="titlebilan">-  Réduisez votre temps d’utilisation d’une heure d’Internet : c’est la consommation de 4000 tonnes de pétrole soit 4000 allers-retours Paris, New-York en avion !</h5>
-
+              <h5 className="titlebilan">-  Si vous suivez ces recommandations, vous économiserez 157€ par an</h5>
             </CardBody>
           </Card>
         </Collapse>

@@ -59,7 +59,6 @@ class AddUsages extends React.Component{
     render(){
         const { categorie, clickConfirmAdd } = this.props;
         const { subcategories, category, newee, mark, model } = this.state;
-        const simulcategorie = 'Ecrans';
 
         return(  
             <div className="AddUsages">
@@ -93,7 +92,7 @@ class AddUsages extends React.Component{
                 </Col>
                 {category===''?
                 <div className="contentAddempty">
-                        <h3 className="pulse">Sélectionnez un type d'usage internet de la catégorie {simulcategorie}</h3>
+                        <h3 className="pulse">Sélectionnez un type d'usage internet</h3>
                     </div>:
                 <Col lg={6} className="contentAdd">
                         <h4>Dites nous en plus sur vos {category}...</h4>

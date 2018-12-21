@@ -4,6 +4,7 @@ import './MesEquipements.scss';
 import equipements from '../equipements.json';
 import TemplateCards from './TemplateCards';
 import Zoom from 'react-reveal/Zoom';
+import Bilan from './Bilan';
 
 class MesEquipements extends Component {
   constructor(props) {
@@ -68,6 +69,7 @@ class MesEquipements extends Component {
           </div>
         }
       </div>
+      <Bilan/>
       </div>
     )
   }
