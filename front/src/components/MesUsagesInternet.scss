@@ -3,15 +3,22 @@
   border-radius: 5px;
 }
 
-.MesUsagesInternet {
-  margin-top: 50px;
+.MesUsagesinternet {
+  margin: 50px 0 50px 0;
   padding: 0 4% 0 4% !important;
 
-  .containerMesUsagesInternet {
+  .containerMesUsagesinternet {
     @include borderContainer;
-  }
+    padding: 20px 0 20px 0;
+    position: relative;
 
-  .containerMaConsommation {
-    @include borderContainer;
+    .btnAddUsagesinternet {
+      position: absolute;
+      right: 20px;
+    }
+
+    .containerCardMesUsagesinternet {
+      display: flex;
+    }
   }
 }

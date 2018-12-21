@@ -4,6 +4,7 @@ import './PageParticulier.scss';
 import MesEquipements from './MesEquipements';
 import MesUsagesInternet from './MesUsagesInternet';
 import AddEquipment from './AddEquipment';
+import AddUsages from './AddUsages';
 import Zoom from 'react-reveal/Zoom';
 
 
@@ -17,11 +18,14 @@ class PageParticulier extends Component {
       activeMesUsagesInternet: '',
       addEquipement: false,
       objDemo: {},
+      objDemoUsages: {}
     }
     this.handleClickNavPage = this.handleClickNavPage.bind(this);
     this.handleClickAddEquipement = this.handleClickAddEquipement.bind(this);
     this.handleClickClose = this.handleClickClose.bind(this);
     this.handleClickConfirmAdd = this.handleClickConfirmAdd.bind(this);
+    this.handleClickAddUsages = this.handleClickAddUsages.bind(this);
+    this.handleClickConfirmAddUsages = this.handleClickConfirmAddUsages.bind(this);
   }
 
   componentDidMount() {
@@ -57,9 +61,16 @@ class PageParticulier extends Component {
     });
   }
 
+  handleClickAddUsages() {
+    this.setState({
+      addUsages: true,
+    });
+  }
+
   handleClickClose() {
     this.setState({
       addEquipement: false,
+      addUsages: false,
     });
   }
 
@@ -79,6 +90,21 @@ class PageParticulier extends Component {
     }, () => console.log(this.state));
   }
 
+  handleClickConfirmAddUsages() {
+    const objDemoUsages = {
+      title : "MAILS",
+      nbboitesmail : "1",
+      nbmailsrecusjournalier : "1-10",
+      nbmailboitereception : "100-500",
+      nbspamssuppriesjournalier : "10-20",
+      nbmailsenvoyesjournalier:"5-10"
+    };
+    this.setState({
+      addUsages: false,
+      objDemoUsages,
+    }, () => console.log(this.state));
+  }
+
   render() {
     return (
       <div className="PageParticulier">
@@ -88,6 +114,16 @@ class PageParticulier extends Component {
             <Zoom bottom>
               <Button className="closeFormAddEquipement" onClick={this.handleClickClose}><i className="fas fa-times"></i></Button>
               <AddEquipment />
+            </Zoom>
+          </div>
+           : null
+        }
+        {
+          (this.state.addUsages) ?
+          <div className="containerAddEquipement" style={{ minHeight: this.state.heightPage }}>
+            <Zoom bottom>
+              <Button className="closeFormAddEquipement" onClick={this.handleClickClose}><i className="fas fa-times"></i></Button>
+              <AddUsages />
             </Zoom>
           </div>
            : null
@@ -102,7 +138,9 @@ class PageParticulier extends Component {
             </Button>
         </nav>
         <div>
-          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement} clickConfirmAdd={this.handleClickConfirmAdd} obj={this.state.objDemo} /> : <MesUsagesInternet />}
+          {(this.state.ongletActif === "mesEquipements") ?
+           <MesEquipements clickAddEquipement={this.handleClickAddEquipement} clickConfirmAdd={this.handleClickConfirmAdd} obj={this.state.objDemo} /> :
+            <MesUsagesInternet clickAddUsages={this.handleClickAddUsages} clickConfirmAdd={this.handleClickConfirmAddUsages} obj={this.state.objDemoUsages}/>}
         </div>
       </div>
     )

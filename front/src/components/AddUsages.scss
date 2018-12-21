@@ -1,0 +1,124 @@
+@mixin hideTapHighlightColor() {
+	//Prevent highlight colour when element is tapped
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.AddUsages{
+    height:40%;
+    margin:2%;
+    .gras{
+        font-weight:bold;
+    }
+    .contentAddempty{
+        background-color:rgb(217, 217, 224);
+        border-radius: 4px;
+        padding:2%;
+        width:40%;
+        text-align: left;
+        align-items: center;
+    }
+    .subcategories{
+        text-align: right;
+        padding-right:0px;
+        .subcategorieslist{
+            list-style:none;
+        }
+        .subcategoriesbutton{
+            width:40%;
+            border-radius: 4px;
+            background-color:#7ad061;
+            border: none;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            padding: 9px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1px;
+            margin-bottom:7px;
+            box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+        }
+        .subcategoriesbutton{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .subcategoriesbutton:after{
+            content: '»';
+            position: absolute;
+            opacity: 0;  
+            top: 9px;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .subcategoriesbutton:hover{
+            content: '»';
+            padding-right: 24px;
+            padding-left:8px;
+        }
+        .subcategoriesbutton:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+        }
+    .contentAdd{
+        width:300px;
+        background-color:grey;
+    }
+    .contentAdd{
+        background-color:rgb(217, 217, 224);
+        padding:25px;
+        border-radius: 4px;
+        .buttonaddusagesinternet{
+                border-radius: 4px;
+                background-color:#7ad061;
+                border: none;
+                color: #fff;
+                text-align: center;
+                font-size: 26px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 1px;
+                box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+            }
+            .buttonaddusagesinternet{
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+    
+            .buttonaddusagesinternet:after{
+                content: '+';
+                position: absolute;
+                opacity: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+            .buttonaddusagesinternet:hover{
+                content: '+';
+                padding-right: 24px;
+                padding-left:8px;
+            }
+            .buttonaddusagesinternet:hover:after {
+                opacity: 1;
+                right: 10px;
+            }
+        .contentadded{
+            width:100%;
+            text-align:left;
+        }
+        }
+        
+        }

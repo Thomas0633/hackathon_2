@@ -1,0 +1,34 @@
+[
+    {
+      "title" : "MAILS",
+      "nbboitesmail" : "1",
+      "nbmailsrecusjournalier" : "1-10",
+      "nbmailboitereception" : "100-500",
+      "nbspamssuppriesjournalier" : "10-20",
+      "nbmailsenvoyesjournalier":"5-10",
+      "nbongletsouverts" : "1-3",
+      "nbrecherches" : "5-10",
+      "nbvideos" : "5-10",
+      "impact" : "3"
+    },
+    {
+        "title":"NAVIGATEURS",
+        "nbboitesmail" : "1",
+        "nbmailsrecusjournalier" : "1-10",
+        "nbmailboitereception" : "100-500",
+        "nbspamssuppriesjournalier" : "10-20",
+        "nbmailsenvoyesjournalier":"5-10",
+        "nbongletsouverts" : "1-3",
+        "nbrecherches" : "5-10",
+        "nbvideos" : "5-10",
+        "impact" : "2"
+    },
+    {
+        "title":"MATERIELS MULTIMEDIA",
+        "nbmaterielmultimedia" : "1-3",
+        "reglageluminosite" : "clair",
+        "apresutilisation" : "Le mettre en veille",
+        "nbspamssuppriesjournalier" : "10",
+        "nbmailsenvoyesjournalier":"10"
+    }
+  ]
