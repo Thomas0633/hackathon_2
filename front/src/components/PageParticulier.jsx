@@ -16,17 +16,19 @@ class PageParticulier extends Component {
       activeMesEquipements: 'active',
       activeMesUsagesInternet: '',
       addEquipement: false,
+      objDemo: {},
     }
     this.handleClickNavPage = this.handleClickNavPage.bind(this);
     this.handleClickAddEquipement = this.handleClickAddEquipement.bind(this);
     this.handleClickClose = this.handleClickClose.bind(this);
+    this.handleClickConfirmAdd = this.handleClickConfirmAdd.bind(this);
   }
 
   componentDidMount() {
     const height = document.body.scrollHeight - 110;
     this.setState({
       heightPage: height,
-    }, () => console.log(this.state));
+    });
   }
 
   handleClickNavPage(e) {
@@ -61,6 +63,22 @@ class PageParticulier extends Component {
     });
   }
 
+  handleClickConfirmAdd() {
+    const objDemo = {
+      title: "SON",
+      mark: "Devialet",
+      model: "Phantom",
+      use: "50",
+      consumption: "18",
+      cost: "7",
+      impact: "2",
+    };
+    this.setState({
+      addEquipement: false,
+      objDemo,
+    }, () => console.log(this.state));
+  }
+
   render() {
     return (
       <div className="PageParticulier">
@@ -84,7 +102,7 @@ class PageParticulier extends Component {
             </Button>
         </nav>
         <div>
-          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement}  /> : <MesUsagesInternet />}
+          {(this.state.ongletActif === "mesEquipements") ? <MesEquipements clickAddEquipement={this.handleClickAddEquipement} clickConfirmAdd={this.handleClickConfirmAdd} obj={this.state.objDemo} /> : <MesUsagesInternet />}
         </div>
       </div>
     )

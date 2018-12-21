@@ -17,6 +17,16 @@ class MesEquipements extends Component {
       cost: '',
       impact: '',
       url: '',
+      objDemo: {},
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.obj.length !== undefined) {
+      console.log(this.props.obj.length)
+      this.setState({
+        mesEquipements: [...this.state.mesEquipements, this.props.obj],
+      });
     }
   }
 
