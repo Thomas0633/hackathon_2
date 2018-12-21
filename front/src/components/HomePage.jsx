@@ -33,14 +33,16 @@ class HomePage extends Component {
                 </a>
               </Link>
               <div className="espace" />
+              <Link to='/page-particulier'>
               <a className="fancy-button bg-gradient1">
-                <span>
-                  <span className="TailleIcone">
-                    <i className="fas fa-building" />
+                  <span>
+                    <span className="TailleIcone">
+                      <i className="fas fa-home" />
+                    </span>
+                    Vous êtes une entreprise ?
                   </span>
-                  Vous êtes une entreprise ?
-                </span>
-              </a>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
