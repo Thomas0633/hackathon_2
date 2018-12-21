@@ -66,13 +66,13 @@ class PageParticulier extends Component {
 
   handleClickConfirmAdd() {
     const objDemo = {
-      title: "SON",
-      mark: "Devialet",
-      model: "Phantom",
-      use: "50",
-      consumption: "18",
-      cost: "7",
-      impact: "2",
+      title: "SMARTPHONE",
+      mark: "SAMSUNG",
+      model: "GALAXY S7",
+      use: "25",
+      consumption: "25",
+      cost: "3.75",
+      impact: "5",
     };
     this.setState({
       addEquipement: false,

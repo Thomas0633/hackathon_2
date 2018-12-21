@@ -18,5 +18,55 @@
     "cost" : "30",
     "impact" : "4",
     "url" : "<i className=\"fas fa-laptop\"></i>"
+  },
+  {
+    "title" : "TABLETTE",
+    "mark" : "APPLE",
+    "model" : "IPAD",
+    "use" : "25",
+    "consumption" : "25",
+    "cost" : "3.75",
+    "impact" : "2",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
+  },
+  {
+    "title" : "TELEVISION",
+    "mark" : "LG",
+    "model" : "43LW540",
+    "use" : "250",
+    "consumption" : "250",
+    "cost" : "37.5",
+    "impact" : "5",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
+  },
+  {
+    "title" : "ENCEINTE",
+    "mark" : "GOOGLE",
+    "model" : "Home Mini",
+    "use" : "25",
+    "consumption" : "25",
+    "cost" : "3.75",
+    "impact" : "1",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
+  },
+  {
+    "title" : "IMPRIMANTE",
+    "mark" : "HP",
+    "model" : "Série 5200",
+    "use" : "75",
+    "consumption" : "75",
+    "cost" : "12",
+    "impact" : "2",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
+  },
+  {
+    "title" : "CONSOLE DE JEUX",
+    "mark" : "SONY",
+    "model" : "Playstation 4",
+    "use" : "180",
+    "consumption" : "180",
+    "cost" : "27",
+    "impact" : "4",
+    "url" : "<i className=\"fas fa-laptop\"></i>"
   }
 ]
